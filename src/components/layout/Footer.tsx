@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
@@ -37,12 +38,12 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
-              <li><a href="#blog" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/#products" className="text-gray-400 hover:text-white transition-colors">Products</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -50,11 +51,14 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <li><a href="#tax-services" className="text-gray-400 hover:text-white transition-colors">Tax Services</a></li>
-              <li><a href="#audit-services" className="text-gray-400 hover:text-white transition-colors">Audit & Assurance</a></li>
-              <li><a href="#business-advisory" className="text-gray-400 hover:text-white transition-colors">Business Advisory</a></li>
-              <li><a href="#business-registration" className="text-gray-400 hover:text-white transition-colors">Business Registration</a></li>
-              <li><a href="#compliance-services" className="text-gray-400 hover:text-white transition-colors">Compliance Services</a></li>
+              <li><Link to="/services/accounting-bookkeeping" className="text-gray-400 hover:text-white transition-colors">Accounting & Bookkeeping</Link></li>
+              <li><Link to="/services/tax-legal" className="text-gray-400 hover:text-white transition-colors">Tax & Legal</Link></li>
+              <li><Link to="/services/corporate-training" className="text-gray-400 hover:text-white transition-colors">Corporate Training</Link></li>
+              <li><Link to="/services/business-advisory" className="text-gray-400 hover:text-white transition-colors">Business Advisory</Link></li>
+              <li><Link to="/services/business-development" className="text-gray-400 hover:text-white transition-colors">Business Development</Link></li>
+              <li><Link to="/services/company-registration" className="text-gray-400 hover:text-white transition-colors">Company Registration</Link></li>
+              <li><Link to="/services/business-setup" className="text-gray-400 hover:text-white transition-colors">Business Set-Up</Link></li>
+              <li><Link to="/services/payroll-services" className="text-gray-400 hover:text-white transition-colors">Payroll Services</Link></li>
             </ul>
           </div>
 
@@ -87,9 +91,9 @@ export const Footer = () => {
           <div className="max-w-md mx-auto lg:mx-0">
             <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
             <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
+              <input
+                type="email"
+                placeholder="Your email address"
                 className="flex-grow px-4 py-2 rounded-l-md focus:outline-none text-gray-900"
               />
               <button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-r-md transition duration-300">
